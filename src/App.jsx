@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -16,7 +17,6 @@ function App() {
     values.push("span"+String(i))
   }
 
-
   return (
     <>
       <section id="main">
@@ -24,9 +24,11 @@ function App() {
         {values.map(function(value){
           return <span key={value}></span>
         })}
-       
-   
+         
         <div className="main-container">
+            <div class="card-container">
+                <Upload/>
+            </div>
         
             <div className='card-container'>
                 <ProfileImage></ProfileImage>
@@ -37,17 +39,11 @@ function App() {
                 <div className="btn">
                     <button>Hire me</button>
                 </div>
-                <div className="social-container">
-                    <div className="icon"><i className="fab fa-twitter"></i></div>
-                    <div className="icon"><i className="fab fa-pinterest"></i></div>
-                    <div className="icon"><i className="fab fa-instagram "></i></div>
-              </div>
-             
-             
+                                
             </div>
 
-        
-              <Upload/>
+          
+            
              
         </div>
        </section>
